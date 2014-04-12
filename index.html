@@ -1,0 +1,19 @@
+---
+layout: default
+title: Your New Jekyll Site
+lang: zh-CN
+---
+
+<div class="row">
+  <div class="col-md-8">
+	  <h1>Posts</h1>
+	  <ul class="posts">
+	    {% for post in site.posts %}
+	      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>&nbsp;<a href="{{ post.url }}#disqus_thread"></a></li>
+		{{ post.content | strip_html | truncatewords:75}}<br>
+         <a href="{{ post.url }}">Read more...</a><br><br>	      
+	    {% endfor %}
+	  </ul>
+  </div>
+  <div class="col-md-4">.col-md-4</div>
+</div>

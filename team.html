@@ -1,0 +1,15 @@
+---
+layout: default
+title: 开发团队
+lang: zh-CN
+members: ['hysios@gmail.com']
+---
+
+<div class="row">
+	<h1>成员</h1>
+	<ul class="members">
+	{% for member in page.members %}
+		<img src="{{ member | to_gravatar }}?s=200" alt='{{member}}'>
+	{% endfor %}
+	</ul>
+</div>
